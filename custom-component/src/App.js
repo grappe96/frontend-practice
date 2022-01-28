@@ -2,6 +2,8 @@ import './App.css';
 import { Route, Routes, Link } from 'react-router-dom';
 import Toggle from './component/Toggle';
 import Modal from './component/Modal';
+import Tab from './component/Tab';
+
 function App() {
   return (
     <div className="App">
@@ -12,10 +14,14 @@ function App() {
         <Link to="/modal" className="link">
           <button className="App-button">Modal</button>
         </Link>
+        <Link to="/tab" className="link">
+          <button className="App-button">Tab</button>
+        </Link>
       </header>
       <Routes>
         <Route path="/" element={<Toggle />} />
         <Route path="/modal" element={<Modal />} />
+        <Route path="/tab" element={<Tab />} />
       </Routes>
     </div>
   );
