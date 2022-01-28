@@ -1,0 +1,9 @@
+.modal-button {
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  padding: 18px 20px;
+  background-color: #280074;
+  color: white;
+  margin-top: 250px;
+}

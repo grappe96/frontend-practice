@@ -11,7 +11,7 @@ function Toggle() {
   return (
     <>
       <div className="title">Toggle</div>
-      <div className="tiggle-body">
+      <div className="toggle-body">
         <label class="toggle-button">
           <input
             type="checkbox"
