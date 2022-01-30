@@ -1,0 +1,51 @@
+.Tag-input {
+  height: 40px;
+  width: auto;
+  outline: none;
+  border: none;
+  display: inline-flex;
+  margin-left: 2px;
+}
+
+.Tag-container {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clicked {
+  border: 1px solid #280074;
+}
+
+.Tag-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Tag-item {
+  display: flex;
+  background-color: #280074;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.Tag-name {
+  color: white;
+}
+
+.Tag-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 0 1px 0 1px;
+  background-color: white;
+  color: black;
+}

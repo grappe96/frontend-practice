@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function Toggle() {
   const [isChecked, setIsChecked] = useState(false);
-  const checkEventHandler = ({ target }) => {
+  const checkEventHandler = (e) => {
     setIsChecked(!isChecked);
   };
 
@@ -12,13 +12,13 @@ function Toggle() {
     <>
       <div className="title">Toggle</div>
       <div className="toggle-body">
-        <label class="toggle-button">
+        <label className="toggle-button">
           <input
             type="checkbox"
             checked={isChecked}
             onChange={(e) => checkEventHandler(e)}
           />
-          <span class="toggle-switch" />
+          <span className="toggle-switch" />
         </label>
         {isChecked ? (
           <div className="notice">Toggle Switch ON</div>
