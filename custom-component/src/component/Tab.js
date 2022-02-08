@@ -9,17 +9,17 @@ function Tab() {
     <>
       <div className="title">Tab</div>
       <div className="Tab-body">
-        <button class="Tab-button" onClick={() => setTabNumber('ONE')}>
+        <button className="Tab-button" onClick={() => setTabNumber('ONE')}>
           Tab1
         </button>
-        <button class="Tab-button" onClick={() => setTabNumber('TWO')}>
+        <button className="Tab-button" onClick={() => setTabNumber('TWO')}>
           Tab2
         </button>
-        <button class="Tab-button" onClick={() => setTabNumber('THREE')}>
+        <button className="Tab-button" onClick={() => setTabNumber('THREE')}>
           Tab3
         </button>
       </div>
-      <div class="Tab-comment">
+      <div className="Tab-comment">
         <p>Tab menu {tabNumber}</p>
       </div>
     </>
