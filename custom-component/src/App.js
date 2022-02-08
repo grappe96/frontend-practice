@@ -4,6 +4,7 @@ import Toggle from './component/Toggle';
 import Modal from './component/Modal';
 import Tab from './component/Tab';
 import Tag from './component/Tag';
+import ClickToEdit from './component/ClickToEdit';
 
 function App() {
   return (
@@ -21,12 +22,16 @@ function App() {
         <Link to="/tag" className="link">
           <button className="App-button">Tag</button>
         </Link>
+        <Link to="/clickToEdit" className="link">
+          <button className="App-button">ClickToEdit</button>
+        </Link>
       </header>
       <Routes>
         <Route path="/" element={<Toggle />} />
         <Route path="/modal" element={<Modal />} />
         <Route path="/tab" element={<Tab />} />
         <Route path="/tag" element={<Tag />} />
+        <Route path="/clickToEdit" element={<ClickToEdit />} />
       </Routes>
     </div>
   );
