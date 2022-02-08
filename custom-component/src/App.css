@@ -20,6 +20,7 @@
   cursor: pointer;
   font-size: large;
   color: white;
+  margin-right: 10px;
 }
 
 .App-button:hover {

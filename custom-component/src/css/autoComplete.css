@@ -1,0 +1,52 @@
+.AutoComplete-container {
+  height: 90%;
+}
+.AutoComplete-body {
+  width: 100%;
+  margin: 200px auto;
+}
+
+.AutoComplete-input {
+  width: 90%;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid lightgray;
+  outline: none;
+  padding: 0 10px;
+  font-size: large;
+}
+
+.AutoComplete-input:focus {
+  box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+.AutoComplete-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #00000000;
+  color: black;
+  font-weight: bold;
+  margin-left: -21px;
+}
+
+.resultList {
+  width: 90%;
+  border: 1px solid lightgray;
+  border-radius: 0 0 15px 15px;
+  margin: 0 auto;
+  box-shadow: 1px 1px 1px 1px lightgray;
+  padding: 10px;
+}
+
+.haveResult {
+  border-radius: 15px 15px 0 0;
+}
+
+.result {
+  text-align: left;
+}
+
+.result:hover {
+  background-color: #00000011;
+}

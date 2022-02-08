@@ -4,6 +4,7 @@ import Toggle from './component/Toggle';
 import Modal from './component/Modal';
 import Tab from './component/Tab';
 import Tag from './component/Tag';
+import AutoComplete from './component/AutoComplete';
 import ClickToEdit from './component/ClickToEdit';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         <Link to="/tag" className="link">
           <button className="App-button">Tag</button>
         </Link>
+        <Link to="/autoComplete" className="link">
+          <button className="App-button">AutoComplete</button>
+        </Link>
         <Link to="/clickToEdit" className="link">
           <button className="App-button">ClickToEdit</button>
         </Link>
@@ -31,6 +35,7 @@ function App() {
         <Route path="/modal" element={<Modal />} />
         <Route path="/tab" element={<Tab />} />
         <Route path="/tag" element={<Tag />} />
+        <Route path="autoComplete" element={<AutoComplete />} />
         <Route path="/clickToEdit" element={<ClickToEdit />} />
       </Routes>
     </div>
