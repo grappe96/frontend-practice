@@ -44,15 +44,17 @@ function Tag() {
     <>
       <div className="title">Tag</div>
       <div className="Tag-container" id="container">
-        <div className="Tag-body">{tags}</div>
-        <input
-          type="text"
-          placeholder="Press enter to add tags"
-          onKeyPress={(e) => keyPressHandler(e)}
-          onFocus={onFocusHandler}
-          onBlur={onBlurHandler}
-          className="Tag-input"
-        />
+        <div className="Tag-body">
+          {tags}
+          <input
+            type="text"
+            placeholder="Press enter to add tags"
+            onKeyPress={(e) => keyPressHandler(e)}
+            onFocus={onFocusHandler}
+            onBlur={onBlurHandler}
+            className="Tag-input"
+          />
+        </div>
       </div>
     </>
   );
