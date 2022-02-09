@@ -3,7 +3,9 @@ import '../css/common.css';
 import '../css/tag.css';
 
 function Tag() {
+  // 입력된 tag 저장하는 array
   const [tagArr, setTagArr] = useState([]);
+  // tag에 부여할 고유 id
   const [idx, setIdx] = useState(0);
 
   const onFocusHandler = () => {
@@ -13,6 +15,7 @@ function Tag() {
     document.getElementById('container').classList.remove('clicked');
   };
 
+  // 입력 후 보여지는 tag
   const tags = tagArr.map((item) => (
     <div key={item.id} className="Tag-item">
       <label className="Tag-name">
@@ -24,7 +27,8 @@ function Tag() {
     </div>
   ));
 
-  const keyPressHandler = (e) => {
+  const onKeyPressHandler = (e) => {
+    // 입력 후 enter 눌렀을 때
     if (e.key === 'Enter' && e.target.value.trim() !== '') {
       const newTag = {
         name: e.target.value,
@@ -49,7 +53,7 @@ function Tag() {
           <input
             type="text"
             placeholder="Press enter to add tags"
-            onKeyPress={(e) => keyPressHandler(e)}
+            onKeyPress={(e) => onKeyPressHandler(e)}
             onFocus={onFocusHandler}
             onBlur={onBlurHandler}
             className="Tag-input"

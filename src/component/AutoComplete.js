@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../css/autoComplete.css';
 
 function AutoComplete() {
+  // 자동완성에 사용될 data
   const data = [
     'apple pie',
     'banana bread',
@@ -30,8 +31,11 @@ function AutoComplete() {
     'zepploe',
   ];
 
+  // 검색창에 입력되는 keyword
   const [keyword, setKeyword] = useState('');
+  // keyword를 포함하는 string만 들어있는 result array
   const [result, setResult] = useState([]);
+  // result값 유무를 파악하는 boolean
   const [isResultEmpty, setIsResultEmpty] = useState(true);
 
   useEffect(() => {
@@ -44,7 +48,7 @@ function AutoComplete() {
     }
   }, [result]);
 
-  const dataChangeHandler = (e) => {
+  const dataOnChangeHandler = (e) => {
     setKeyword(e.target.value);
     searchKeywordFromData(e.target.value);
   };
@@ -54,6 +58,7 @@ function AutoComplete() {
     setResult([]);
   };
 
+  // keyword 포함 여부 확인하는 function
   const isStringContainsKeyword = (string, keyword) => {
     keyword = keyword.trim();
     const len = keyword.length;
@@ -63,12 +68,14 @@ function AutoComplete() {
     return false;
   };
 
+  // keyword 포함하는 data만 result에 추가
   const searchKeywordFromData = (keyword) => {
     setResult(
       data.filter((string) => isStringContainsKeyword(string, keyword))
     );
   };
 
+  // 자동완성 result 선택 시 keyword 완성하는 function
   const autoCompleteKeyword = (string) => {
     setKeyword(string);
     searchKeywordFromData(string);
@@ -84,10 +91,12 @@ function AutoComplete() {
       .classList.remove('haveResult');
   };
 
-  const bodyClickHandler = (e) => {
+  // 검색창 외부 클릭 시 reset하는 function
+  const bodyOnClickHandler = (e) => {
     if (e.target === e.currentTarget) resetData();
   };
 
+  // 검색 결과
   const results = result.map((res, idx) => (
     <div key={idx} className="result" onClick={() => autoCompleteKeyword(res)}>
       {res}
@@ -97,7 +106,7 @@ function AutoComplete() {
   return (
     <div
       className="AutoComplete-container"
-      onClick={(e) => bodyClickHandler(e)}
+      onClick={(e) => bodyOnClickHandler(e)}
     >
       <div className="title">AutoComplete</div>
       <div className="AutoComplete-body">
@@ -106,7 +115,7 @@ function AutoComplete() {
           value={keyword}
           id="AutoComplete-input"
           className="AutoComplete-input"
-          onChange={(e) => dataChangeHandler(e)}
+          onChange={(e) => dataOnChangeHandler(e)}
         ></input>
         <button className="AutoComplete-button" onClick={resetData}>
           x

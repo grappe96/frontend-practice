@@ -3,8 +3,10 @@ import '../css/toggle.css';
 import { useState } from 'react';
 
 function Toggle() {
+  // toggle 버튼 체크 유무 판별할 state
   const [isChecked, setIsChecked] = useState(false);
-  const checkEventHandler = (e) => {
+
+  const checkboxOnChangeHandler = (e) => {
     setIsChecked(!isChecked);
   };
 
@@ -16,7 +18,7 @@ function Toggle() {
           <input
             type="checkbox"
             checked={isChecked}
-            onChange={(e) => checkEventHandler(e)}
+            onChange={(e) => checkboxOnChangeHandler(e)}
           />
           <span className="toggle-switch" />
         </label>

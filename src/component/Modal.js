@@ -4,7 +4,9 @@ import Alert from '../component/Alert';
 import { useState } from 'react';
 
 function Modal() {
+  // modal 렌더링 여부 체크하는 state
   const [isAlert, setIsAlert] = useState(false);
+
   const closeAlert = () => {
     setIsAlert(false);
   };

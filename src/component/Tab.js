@@ -3,6 +3,7 @@ import '../css/common.css';
 import '../css/tab.css';
 
 function Tab() {
+  // tab 하단에 보여지는 content
   const [tabNumber, setTabNumber] = useState('ONE');
 
   return (
